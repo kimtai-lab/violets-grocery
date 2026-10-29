@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Violet's Grocery</title>
+
+  <style>
+    :root {
+      --grocery-blue: #143554;
+      --gold-solid: #caa33c;
+      --gold-light: #f7eed3;
+      --tomato: #d8432e;
+      --paper: #f9faf8;
+      --ink: #111a12;
+      --card-bg: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--grocery-blue);
+      color: white;
+      padding: 50px 24px 45px;
+      text-align: left;
+      border-bottom: 8px solid var(--gold-solid);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      font-weight: normal;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+    }
+    header p {
+      font-size: 1.1rem;
+      max-width: 48ch;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 24px;
+      background: var(--tomato);
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(216, 67, 46, 0.25);
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #b9341f; }
+
+    main {
+      padding: 30px 16px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    section { margin-bottom: 35px; }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--grocery-blue);
+      margin-bottom: 16px;
+      font-weight: normal;
+      border-bottom: 2px solid var(--gold-solid);
+      padding-bottom: 6px;
+    }
+
+    .shop-photo {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: 50% 45%;
+      border-radius: 14px;
+      border: 1px solid #e3eae4;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: block;
+    }
+    .photo-caption {
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      color: #5b6b62;
+      margin-top: 8px;
+    }
+
+    .updated {
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      color: var(--grocery-blue);
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold-solid);
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    .menu-card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      border: 1px solid #e3eae4;
+    }
+
+    .category-heading {
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: var(--gold-solid);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 20px 0 10px 0;
+    }
+    .category-heading:first-child { margin-top: 0; }
+
+    .price-list { list-style: none; }
+    .price-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px dashed #e3eae4;
+      font-family: Arial, sans-serif;
+      font-size: 1.05rem;
+    }
+    .price-list li:last-child { border-bottom: none; }
+    .price-list .price { font-weight: bold; color: var(--grocery-blue); }
+
+    .info-card p { margin-bottom: 12px; font-size: 1.05rem; }
+    .info-card strong { color: var(--grocery-blue); }
+
+    .gold-link {
+      color: var(--gold-solid) !important;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.15rem;
+      border-bottom: 1px dashed var(--gold-solid);
+    }
+    .gold-link:hover { color: #ad872a !important; }
+
+    footer {
+      background: #0f1c29;
+      color: #cbd4da;
+      text-align: center;
+      padding: 24px 20px;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Violet's Grocery 🥬</h1>
+    <p>Fresh Choices. Quality You Can Trust. Your trusted destination for fresh fruits, quality vegetables, and everyday grocery essentials at Lubao Market.</p>
+    <a class="btn" href="https://wa.me">Order on WhatsApp</a>
+  </header>
+
+  <main>
+
+    <section id="shop">
+      <h2>Our Shop</h2>
+      <img class="shop-photo" src="shop.jpg" alt="Violet's Grocery stall at Lubao Market with fresh vegetables, tomatoes, bananas and cooking oil">
+      <p class="photo-caption">Our stall at Lubao Market. Come and see the freshness yourself.</p>
+    </section>
+
+    <section id="products">
+      <h2>Today's Prices</h2>
+
+      <p class="updated">Prices last updated: 29 October 2026</p>
+
+      <div class="menu-card">
+        <div class="category-heading">Fresh Produce & Milk</div>
+        <ul class="price-list">
+          <li><span>Tomatoes (1 kg)</span> <span class="price">KSh 100</span></li>
+          <li><span>Onions (1 kg)</span> <span class="price">KSh 120</span></li>
+          <li><span>Potatoes (1 kg)</span> <span class="price">KSh 80</span></li>
+          <li><span>Bananas (bunch)</span> <span class="price">KSh 150</span></li>
+          <li><span>Kale / Sukuma wiki (bunch)</span> <span class="price">KSh 20</span></li>
+          <li><span>Cooking oil (1 Litre)</span> <span class="price">KSh 280</span></li>
+          <li><span>Fresh milk (1 cup)</span> <span class="price">KSh 30</span></li>
+        </ul>
+
+        <div class="category-heading">Spices</div>
+        <ul class="price-list">
+          <li><span>Dania</span> <span class="price">KSh 20</span></li>
+          <li><span>Carrots</span> <span class="price">KSh 20</span></li>
+          <li><span>Chilli</span> <span class="price">KSh 20</span></li>
+          <li><span>Ginger</span> <span class="price">KSh 20</span></li>
+          <li><span>Lemon</span> <span class="price">KSh 20</span></li>
+          <li><span>Garlic</span> <span class="price">KSh 30</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="info-card">
+      <h2>Visit Us</h2>
+      <div class="menu-card">
+        <p><strong>Location:</strong> Lubao Market, along Kakamega-Webuye Road</p>
+        <p><strong>Open:</strong> Monday to Saturday, 6:00 am to 9:00 pm</p>
+        <p><strong>Call Line:</strong> <a class="gold-link" href="tel:0707081597">0707 081 597</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Violet's Grocery. Website by Dennis.</p>
+  </footer>
+
+</body>
+</html>
